@@ -1,0 +1,12 @@
+.navbar{
+    height: 100%;
+    background-color: rgb(222, 206, 67);
+}
+.navbar-brand{
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+.container-fluid{
+    justify-content: center;
+}

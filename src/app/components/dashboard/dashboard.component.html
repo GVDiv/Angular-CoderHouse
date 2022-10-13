@@ -1,0 +1,120 @@
+
+  <div class="container">  
+    <div class="header_container">
+      <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">Estos son los cursos que corresponden al paquete programador Frontend Angular</p>
+        <hr class="my-4">
+        <p>todavia queda mucho por aprender, en la seccion de cursos vas a encontrar mas informacion...</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Ver</a>
+      </div>
+    </div>
+  
+        <div class="card">
+          <h5 class="card-header">Desarrollo web</h5>
+          <div class="card-body">
+            <h5 class="card-title">Proxima fecha</h5>
+            <span class="fecha">{{fecha | date:'-/-/-'}}</span>
+            <div class="card-text">
+              <span>Estado del curso:</span>
+              <div [ngClass]="fin === 'finalizado' ? 'terminado' : 'inicio'">{{fin}}</div>
+            </div>
+            <h5>Lista de alumnos</h5>
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#web" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Ver
+              </a>
+            </p>
+            <div class="collapse multi-collapse" id="web">
+              <div class="card card-body">
+                <ul class="curso_alumnos">
+                  <div *ngFor="let alumno of listaAlumnos" >
+                    <li *ngIf="alumno.curso === 'DesarrolloWeb'">
+                      <div>{{alumno.nombre}}</div>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+            <h5 class="card-header">JavaScript</h5>
+            <div class="card-body">
+              <h5 class="card-title">Proxima fecha</h5>
+              <span class="fecha">{{fecha | date:'3/10/22'}}</span>
+              <div class="card-text">
+                <span>Estado del curso:</span>
+                <div [ngClass]="inicio === 'cursando' ? 'inicio' : 'fin'">{{inicio}}</div>
+              </div>
+              <h5>Lista de alumnos</h5>
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#js" role="button" aria-expanded="false" >
+                  Ver
+                </a>
+              </p>
+              <div class="collapse" id="js">
+                <div class="card card-body">
+                  <ul class="curso_alumnos">
+                    <div *ngFor="let alumno of listaAlumnos" >
+                      <li *ngIf="alumno.curso === 'JavaScript'">
+                        <div>{{alumno.nombre}}</div>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="card">
+            <h5 class="card-header">Angular</h5>
+            <div class="card-body">
+              <h5 class="card-title">Proxima fecha</h5>
+              <span class="fecha">{{fecha | date:'4/10/22'}}</span>
+              <div class="card-text">
+                <span>Estado del curso:</span>
+                <div [ngClass]="inicio === 'cursando' ? 'inicio' : 'fin'">{{inicio}}</div>
+              </div>
+              <h5>Lista de alumnos</h5>
+              <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#angular" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Ver
+                </a>
+              </p>
+              <div class="collapse" id="angular">
+                <div class="card card-body">
+                  <ul class="curso_alumnos">
+                    <div *ngFor="let alumno of listaAlumnos" >
+                      <li *ngIf="alumno.curso === 'Angular'">
+                        <div>{{alumno.nombre}}</div>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+     
+    <div class="table-responsive">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Alumnos</th>
+              <th scope="col">Curso</th>
+              <th scope="col">Contacto</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let alumno of listaAlumnos">
+            <tr>
+              <th scope="row"><i class="bi bi-person-lines-fill"></i></th>
+              <td>{{alumno.nombre}}</td>
+              <td>{{alumno.curso}}</td>
+              <td>{{alumno.contacto}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>  
+  </div>

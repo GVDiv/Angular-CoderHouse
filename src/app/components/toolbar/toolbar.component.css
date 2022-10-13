@@ -1,0 +1,16 @@
+
+.bi {
+    font-size: 20px;
+    color: #fff;
+}
+.collapse{
+   justify-content: flex-end;
+}
+.navbar-nav{
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: unset;
+}
+.dropdown-menu{
+    background-color: rgb(205, 188, 30);
+}

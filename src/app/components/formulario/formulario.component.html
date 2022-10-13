@@ -1,0 +1,72 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <h1>Alta de cursos</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="formulario" (ngSubmit)="submitForm()">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group mb-3">
+                            <input type="text" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('nombre')?.errors && formulario.get('nombre')?.touched}" formControlName="nombre" placeholder="Nombre">
+                            <div class="invalid-feedback">
+                                <small *ngIf="formulario.get('nombre')?.errors?.['required'] && formulario.get('nombre')?.touched">El campo nombre es requerido</small>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('apellido')?.errors && formulario.get('apellido')?.touched}" formControlName="apellido" placeholder="Apellido">
+                            <div class="invalid-feedback">
+                                <small *ngIf="formulario.get('apellido')?.errors?.['required'] && formulario.get('apellido')?.touched">El campo apellido es requerido</small>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('edad')?.errors && formulario.get('edad')?.touched}" formControlName="edad" placeholder="Edad">
+                            <div class="invalid-feedback">
+                                <small *ngIf="formulario.get('edad')?.errors?.['min']">Debes tener 21 años o mas </small>
+                                <small *ngIf="formulario.get('edad')?.errors?.['errorEdad'] && formulario.get('edad')?.touched">La edad debe ser un numero </small>
+                                <small *ngIf="formulario.get('edad')?.errors?.['required'] && formulario.get('edad')?.touched">El campo edad es requerido</small>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('username')?.errors && formulario.get('username')?.touched}" formControlName="username" placeholder="Username">
+                            <div class="invalid-feedback">
+                                <small *ngIf="formulario.get('username')?.errors?.['required'] && formulario.get('username')?.touched">El campo username es requerido</small>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="password" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('password')?.errors && formulario.get('password')?.touched}" formControlName="password" placeholder="Password">
+                            <div class="invalid-feedback">
+                                <small *ngIf="formulario.get('password')?.errors?.['required'] && formulario.get('password')?.touched">El campo password es requerido</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col" formArrayName="cursos">
+                                <div *ngFor="let cursos of cursos.controls; let i = index">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" formControlName="{{ i }}" placeholder="cursos {{i + 1}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-success mr-3 mt-1" (click)="addCurso()" type="button">Agregar Curso</button>
+                                <button class="btn btn-danger mt-1" (click)="delCurso()" [disabled]="cursos.length === 1" type="button">Borrar Curso</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-primary mb-3" type="submit" [disabled]="!formulario.valid">Enviar Datos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

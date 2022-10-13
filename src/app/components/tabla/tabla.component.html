@@ -1,0 +1,19 @@
+<button class="btn btn-danger mb-3 ml-3" (click)="delUsuario()" [disabled]="usuarios.length === 0">Borrar Datos</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Cursos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.cursos }}</td>
+      </tr>
+    </tbody>
+  </table>

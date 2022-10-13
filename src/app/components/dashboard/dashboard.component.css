@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 15px;
+    gap: 1rem;
+}
+.header_container{
+    width: 100%;
+}
+.jumbotron{
+    color: #333;
+    background: linear-gradient(to left, rgb(190, 167, 14),20%, rgb(255, 221, 2) 75%);
+    border-radius: 20px;
+}
+.card{
+    margin: 0 10px;
+    align-items: center;
+}
+.card-body{
+    text-align: center;
+}
+.inicio{
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px 5px;
+    color: #fff;
+}
+.terminado{
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px 5px;
+    color: #fff;
+}
+
+.curso_alumnos{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+    letter-spacing: 1px;
+    opacity: .7;
+}
+.fecha{
+    opacity: .7;
+}
+
+@media(max-width:800px){
+    .dash_news{
+        flex-direction: column;
+    }
+    .card{
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
