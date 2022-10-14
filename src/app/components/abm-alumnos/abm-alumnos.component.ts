@@ -33,8 +33,8 @@ export class AbmAlumnosComponent implements OnInit {
 
   openDialog(): void {
     let dialog = this.dialog.open(CrearDialogComponent, {
-      width: '50%',
-      height: '50%',
+      // width: '50%',
+      // height: '50%',
     });
 
     dialog.beforeClosed().subscribe(res => {

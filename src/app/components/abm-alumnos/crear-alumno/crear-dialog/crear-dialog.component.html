@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Crear alumno</h1>
 <div mat-dialog-content class="form_alumno">
-  <form [formGroup]="form">
+  <!-- <form [formGroup]="form">
     <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
         <input matInput formControlName="nombre" placeholder="Nombre">
@@ -21,9 +21,59 @@
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" placeholder="Email">
     </mat-form-field>
+  </form> -->
+
+  <form [formGroup]="form">
+    <div class="row">
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" [ngClass]="{'form-control': true, 'is-invalid': form.get('nombre')?.errors && form.get('nombre')?.touched}" formControlName="nombre" placeholder="Nombre">
+                <div class="invalid-feedback">
+                    <small *ngIf="form.get('nombre')?.errors?.['required'] && form.get('nombre')?.touched">El campo nombre es requerido</small>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" [ngClass]="{'form-control': true, 'is-invalid': form.get('apellido')?.errors && form.get('apellido')?.touched}" formControlName="apellido" placeholder="Apellido">
+                <div class="invalid-feedback">
+                    <small *ngIf="form.get('apellido')?.errors?.['required'] && form.get('apellido')?.touched">El campo apellido es requerido</small>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" [ngClass]="{'form-control': true, 'is-invalid': form.get('edad')?.errors && form.get('edad')?.touched}" formControlName="edad" placeholder="Edad">
+                <div class="invalid-feedback">
+                    <small *ngIf="form.get('edad')?.errors?.['min']">Debes tener 21 años o mas </small>
+                    <small *ngIf="form.get('edad')?.errors?.['errorEdad'] && form.get('edad')?.touched">La edad debe ser un numero </small>
+                    <small *ngIf="form.get('edad')?.errors?.['required'] && form.get('edad')?.touched">El campo edad es requerido</small>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" [ngClass]="{'form-control': true, 'is-invalid': form.get('username')?.errors && form.get('username')?.touched}" formControlName="username" placeholder="Username">
+                <div class="invalid-feedback">
+                    <small *ngIf="form.get('username')?.errors?.['required'] && form.get('username')?.touched">El campo username es requerido</small>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="text" [ngClass]="{'form-control': true, 'is-invalid': form.get('email')?.errors && form.get('email')?.touched}" formControlName="email" placeholder="Email">
+              <div class="invalid-feedback">
+                  <small *ngIf="form.get('email')?.errors?.['required'] && form.get('email')?.touched">El campo email es requerido</small>
+              </div>
+          </div>
+
+            
+            <!-- <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary mb-3" type="submit" >Enviar Datos</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
   </form>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Cancelar</button>
-  <button mat-button (click)="guardar()">Guardar</button>
+  <button mat-button (click)="guardar()" [disabled]="!form.valid">Guardar</button>
 </div>

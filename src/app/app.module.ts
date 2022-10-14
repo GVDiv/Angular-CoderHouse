@@ -12,11 +12,14 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { AbmCursosComponent } from './components/abm-cursos/abm-cursos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialComponent } from './components/material/material.component';
 import { AbmAlumnosComponent } from './components/abm-alumnos/abm-alumnos.component'
 import { CrearDialogComponent } from './components/abm-alumnos/crear-alumno/crear-dialog/crear-dialog.component';
 import { MaterialModule } from './material/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CardCursosComponent } from './components/card-cursos/card-cursos.component';
+import { CardTableComponent } from './components/card-table/card-table.component';
+import { BooleanATextoPipe } from './pipes/boolean-a-texto.pipe';
+import { BooleanEstiloDirective } from './directives/boolean-estilo.directive';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,12 @@ import { AppRoutingModule } from './app-routing.module';
     FormularioComponent,
     TablaComponent,
     AbmCursosComponent,
-    MaterialComponent,
     AbmAlumnosComponent,
     CrearDialogComponent,
+    CardCursosComponent,
+    CardTableComponent,
+    BooleanATextoPipe,
+    BooleanEstiloDirective,
   ],
   imports: [
     BrowserModule,

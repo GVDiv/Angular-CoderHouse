@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder, ValidatorFn, AbstractControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -10,11 +10,11 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class CrearDialogComponent implements OnInit {
   form: FormGroup = this.fb.group(
     {
-      nombre:[null, Validators.required],
-      apellido:[null, Validators.required],
-      edad:[null, Validators.required],
-      curso:[null, Validators.required],
-      email:[null, Validators.required],
+      nombre: ['', [Validators.required]],
+      apellido: ['', [Validators.required]],
+      edad: ['',[Validators.required, Validators.min(21), this.validarEdad()]],
+      username: ['',[Validators.required]],
+      email: ['',[Validators.required]],
     }
   )
 
@@ -28,6 +28,12 @@ export class CrearDialogComponent implements OnInit {
 
   guardar(){
     this.dialogRef.close(this.form.value)
+  }
+
+  validarEdad(): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} | null =>{
+      return (!Number.isInteger(parseInt(control.value))) ? {errorEdad: true} : null;
+    }
   }
   
  

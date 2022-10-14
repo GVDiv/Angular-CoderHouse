@@ -9,6 +9,7 @@
             <form [formGroup]="formulario" (ngSubmit)="submitForm()">
                 <div class="row">
                     <div class="col">
+                        
                         <div class="input-group mb-3">
                             <input type="text" [ngClass]="{'form-control': true, 'is-invalid': formulario.get('nombre')?.errors && formulario.get('nombre')?.touched}" formControlName="nombre" placeholder="Nombre">
                             <div class="invalid-feedback">
