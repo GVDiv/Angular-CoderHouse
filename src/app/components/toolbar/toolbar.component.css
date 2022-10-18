@@ -11,6 +11,9 @@
     justify-content: flex-end;
     flex-direction: unset;
 }
+.logo{
+    padding-left: 30%;
+}
 .dropdown-menu{
     background-color: rgb(205, 188, 30);
 }

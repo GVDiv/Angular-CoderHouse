@@ -9,14 +9,14 @@ import { MenuComponent } from './components/menu/menu.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { TablaComponent } from './components/tabla/tabla.component';
-import { AbmCursosComponent } from './components/abm-cursos/abm-cursos.component';
+import { AbmCursosComponent } from './components/cursos/abm-cursos/abm-cursos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbmAlumnosComponent } from './components/abm-alumnos/abm-alumnos.component'
 import { CrearDialogComponent } from './components/abm-alumnos/crear-alumno/crear-dialog/crear-dialog.component';
 import { MaterialModule } from './material/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { CardCursosComponent } from './components/card-cursos/card-cursos.component';
+import { CardCursosComponent } from './components/cursos/card-cursos/card-cursos.component';
 import { CardTableComponent } from './components/card-table/card-table.component';
 import { BooleanATextoPipe } from './pipes/boolean-a-texto.pipe';
 import { BooleanEstiloDirective } from './directives/boolean-estilo.directive';
