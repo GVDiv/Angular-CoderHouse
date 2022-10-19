@@ -1,6 +1,7 @@
 .navbar{
     height: 100%;
     background-color: rgb(222, 206, 67);
+    z-index: 101;
 }
 .navbar-brand{
     color: #333;
