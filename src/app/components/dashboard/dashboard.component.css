@@ -53,12 +53,8 @@
     opacity: .7;
 }
 
-@media(max-width:800px){
-    .dash_news{
-        flex-direction: column;
+/* @media(max-width:850px){
+    .{
+        margin-left: unset;
     }
-    .card{
-        margin: 0;
-        margin-bottom: 15px;
-    }
-}
+} */
