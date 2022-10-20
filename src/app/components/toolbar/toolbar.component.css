@@ -16,3 +16,11 @@
 .dropdown-menu{
     background-color: rgb(205, 188, 30);
 }
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+
+}

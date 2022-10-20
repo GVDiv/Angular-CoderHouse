@@ -7,10 +7,10 @@ import { AbmAlumnosComponent } from './components/abm-alumnos/abm-alumnos.compon
 
 
 const routes: Routes = [
-  { path: 'home', component: DashboardComponent },
-  { path: 'cursos', component: AbmCursosComponent },
+  { path: 'inicio', component: DashboardComponent },
   { path: 'alumnos', component: AbmAlumnosComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'cursos', component: AbmCursosComponent },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 ];
 
 @NgModule({

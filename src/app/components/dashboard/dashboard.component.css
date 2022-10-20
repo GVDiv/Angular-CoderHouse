@@ -1,20 +1,22 @@
-.container{
+.container-inicio{
     display: flex;
+    height: 100vh;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     justify-content: space-evenly;
-    margin: auto;
-    margin-top: 15px;
+    margin-top: 60px;
     gap: 1rem;
+    background-color: #333;
 }
-.header_container{
-    width: 100%;
+
+.card-container{
+    display: flex;
+    margin: 2rem 2rem;
+    margin-top: 100px;
 }
-.jumbotron{
-    color: #333;
-    background: linear-gradient(to left, rgb(190, 167, 14),20%, rgb(255, 221, 2) 75%);
-    border-radius: 20px;
+
+.tabla-alumnos{
+    margin-left: 160px;
 }
 .card{
     margin: 0 10px;
