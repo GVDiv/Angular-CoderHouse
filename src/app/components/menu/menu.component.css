@@ -1,14 +1,21 @@
-.nav{
-    width: 100%;
-}a{
-    color: #fff;
-    margin: 10px 0;
-    cursor: pointer;
+
+.menu{
+    position: fixed;
+    z-index: 100;
+    width: 160px;
+    height: 100vh;
+    background-color: #343a40;
 }
-.nav-item{
-    padding: 1rem 1rem;
+.menu-link{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 50px 15px;
 }
-.menu_desktop{
-    margin-top: 50%;
-    margin-left: 10%;
+
+
+@media(max-width: 850px){
+    .menu{
+        display: none;
+    }
 }

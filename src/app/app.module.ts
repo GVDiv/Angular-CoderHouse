@@ -20,6 +20,7 @@ import { CardCursosComponent } from './components/card-cursos/card-cursos.compon
 import { CardTableComponent } from './components/card-table/card-table.component';
 import { BooleanATextoPipe } from './pipes/boolean-a-texto.pipe';
 import { BooleanEstiloDirective } from './directives/boolean-estilo.directive';
+import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { BooleanEstiloDirective } from './directives/boolean-estilo.directive';
     CardTableComponent,
     BooleanATextoPipe,
     BooleanEstiloDirective,
+    FiltroCursosPipe,
   ],
   imports: [
     BrowserModule,

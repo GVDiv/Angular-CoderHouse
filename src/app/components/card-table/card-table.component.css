@@ -1,0 +1,26 @@
+.fechas-container{
+    height: 100vh;
+    margin-left: 160px;
+    margin-top: 60px;
+    overflow: auto;
+    background-color: #333;  
+}
+
+.filtros{
+    background-color: #343a40;
+}
+
+.tabla-title{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+
+    display: inline-block;
+    margin: 20px 0;
+}
+
+@media(max-width:850px){
+    .fechas-container{
+        margin-left: unset;
+    }
+}

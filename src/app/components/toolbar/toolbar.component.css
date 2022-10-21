@@ -1,4 +1,3 @@
-
 .bi {
     font-size: 20px;
     color: #fff;
@@ -11,6 +10,17 @@
     justify-content: flex-end;
     flex-direction: unset;
 }
+.logo{
+    padding-left: 30%;
+}
 .dropdown-menu{
     background-color: rgb(205, 188, 30);
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+    height: 60px;
 }

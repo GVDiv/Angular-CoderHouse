@@ -1,0 +1,13 @@
+
+.container-cursos{
+    margin-top: 60px;
+    margin-left: 160px;
+    height: 100vh;
+    margin-right: 15px;
+}
+
+@media(max-width:850px){
+    .container-cursos{
+        margin-left: unset;
+    }
+}
