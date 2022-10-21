@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AbmCursosComponent } from './components/cursos/abm-cursos/abm-cursos.component';
+import { AbmCursosComponent } from './components/abm-cursos/abm-cursos.component';
 import { AbmAlumnosComponent } from './components/abm-alumnos/abm-alumnos.component';
 import { CardTableComponent } from './components/card-table/card-table.component';
 

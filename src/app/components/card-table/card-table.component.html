@@ -1,12 +1,12 @@
 <div class="fechas-container">
-    <span class="tabla-title">Tabla de Fechas y Cursos</span>
+    <span class="tabla-title">Tabla de Fechas</span>
     <div class="row filtros">
-        <mat-form-field class="col-md-6">
+        <mat-form-field class="col-md-5">
             <mat-label>Filtrar por nombre de curso</mat-label>
             <input type="text" matInput (keyup)="filtrarCurso($event)">
         </mat-form-field>
 
-        <mat-form-field class="col-md-6">
+        <mat-form-field class="col-md-5">
             <mat-label>Filtrar por numero de comision</mat-label>
             <input type="text" matInput (keyup)="filtrarComision($event)">
         </mat-form-field>
@@ -62,5 +62,7 @@
             <tr mat-row *matRowDef="let row; columns:columnas"></tr>
         </table>
     </div>
-
+    <app-card-cursos></app-card-cursos>
 </div>
+
+
